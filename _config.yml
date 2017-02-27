@@ -1,0 +1,76 @@
+destination: ../site
+
+# Syntax highlighting
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+permalink:           /:title
+
+# Setup
+timezone:            Europe/Stockholm # eg. Asia/Kathmandu
+locale:              sv_SE # eg. en_us
+name:				 Thomas Fors
+title:               Thomas Fors
+tagline:             'tagline'
+description:         'artistic images'
+url:                 'http://thomasfors.se'
+rss:                 rss feed url
+baseurl_posts_img:   '/assets/images/posts/'
+baseurl_featured_img: '/assets/images/hero/'
+baseurl_featured_thumbnail: '/assets/images/thumbnail/'
+baseurl_javascripts: '/assets/javascripts/'
+icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
+disqus:              disqus_shortname # get it on https://disqus.com/admin/
+
+author:
+  name:           	 Thomas Fors
+  url:            	 http://thomasfors.se
+  facebook:          username
+  twitter:           username
+  google_plus:       username
+  linkedin:          username
+  dribbble:          username
+  pinterest:         username
+  kiva:              username
+
+fb_admins:           your facebook profile id
+fb_appid:            your facebook app id
+
+# Server
+exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml"]
+port:             	 9001
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "default"
+
+prose:
+    rooturl: "_posts"
+    siteurl: "http://thomsefors.se"
+    relativeLinks: "http://thomsefors.se/links.jsonp"
+    media: 'assets/images/posts'
+    metadata:
+        _posts:
+            - name: "title"
+              field:
+                  element: "text"
+                  label: "title"
+            - name: "feature"
+              field:
+                  element: "text"
+                  label: "Showcase Bild"
+                  type: "text"
+            - name: 'published'
+              field:
+                  element: 'checkbox'
+                  label: 'Publicerad'
+                  value: 'true'
+            - name: 'layout'
+              field:
+                  element: 'hidden'
+                  value: "post"

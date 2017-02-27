@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en-us" class="no-js">
+{% include head.html %}
+
+
+<body>
+{% include loading.html %}
+
+{% if page.url != '/' %}
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+    {% include sidebar-nav.html %}
+{% endif %}
+
+{{ content }}
+
+{% if page.url != '/' %}
+    {% include sidebar-toggle.html %}
+{%else%}
+
+{% endif %}
+
+
+{% include footer-scripts.html %}
+</body>
+</html>
